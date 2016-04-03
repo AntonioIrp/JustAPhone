@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/desktopMainRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/desktopAppsContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
+        
+           
+
+        <LinearLayout
+            android:id="@+id/containerFirstElement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+             <fragment
+                 android:id="@+id/date_and_time_fragment"
+                 android:name="com.selfdevel.justaphone.DateAndTimeFragment"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 class="com.selfdevel.justaphone.DateAndTimeFragment" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/containerSecondElement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/containerFirstElement"
+            android:orientation="vertical" >
+             
+            <fragment
+               	 android:id="@+id/phone_fragment"
+                 android:name="com.selfdevel.justaphone.PhoneFragment"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 class="com.selfdevel.justaphone.PhoneFragment" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/containerAppsElement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/containerSecondElement"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Large Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/desktopConfigurationButtonLinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="75dp"
+            android:layout_alignParentBottom="true"
+            android:background="#4A4A4A"
+            android:orientation="vertical" >
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="openSettings"
+        android:text="Button" />
+
+</RelativeLayout>
